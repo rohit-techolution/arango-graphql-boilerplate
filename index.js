@@ -9,7 +9,7 @@ const { ApolloServer, AuthenticationError } = require('apollo-server-express');
 const { BaseRedisCache } = require('apollo-server-cache-redis');
 const { makeExecutableSchema } = require('@graphql-tools/schema');
 
-const UsersDataSource = require('./datasources/users');
+const RickAndMortyDataSource = require('./datasources/Rick&MortyDataSource');
 const createDB = require('./arangodb/db');
 const typeDefs = require('./schemas');
 const resolvers = require('./resolvers');
@@ -91,7 +91,7 @@ async function start() {
 		...cache,
 		dataSources: () => {
 			return {
-				Users: new UsersDataSource(db, 'users'),
+				RickAndMorty: new RickAndMortyDataSource(),
 			};
 		},
 		formatError: errorFormatterAndLogger,

@@ -6,6 +6,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node index.js",
+		"dev": "nodemon index.js",
 		"prepare": "husky install"
 	},
 	"author": "Sandeep Raj",
@@ -14,6 +15,7 @@
 		"@google-cloud/pubsub": "^2.16.0",
 		"@graphql-tools/schema": "^7.1.5",
 		"@msandeepraj211/arango-datasource": "git+https://github.com/msandeepraj211/arango-datasouce.git",
+		"apollo-datasource-rest": "^3.5.1",
 		"apollo-server-cache-redis": "^3.0.0",
 		"apollo-server-express": "^2.25.2",
 		"arangojs": "^6.11.1",
@@ -29,6 +31,7 @@
 	},
 	"devDependencies": {
 		"bunyan-debug-stream": "^2.0.0",
-		"husky": "^7.0.1"
+		"husky": "^7.0.1",
+		"nodemon": "^2.0.15"
 	}
 }

@@ -1,13 +1,9 @@
-const { usersTypeDef } = require('./users');
+const EpisodeTypeDef = require('./episodes')
 
 const Query = `
 	type Query {
-		users: [User]
-		user(userId: ID!): User
-	}
-	type Mutation {
-		user(username: String!): User
+		episodes(page: Int): Episodes
 	}
 `;
 
-module.exports = [Query, usersTypeDef];
+module.exports = [Query, EpisodeTypeDef];

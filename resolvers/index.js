@@ -1,7 +1,7 @@
-const UsersResolver = require('./users');
+const EpisodeResolver = require('./episodes');
 
 module.exports = {
-	Query: Object.assign({}, UsersResolver.rootQueryResolver),
-	Mutation: Object.assign({}, UsersResolver.mutationResolver),
-	...UsersResolver.otherResolvers,
+	Query: Object.assign({}, EpisodeResolver.rootQueryResolver),
+	// Mutation: Object.assign({}, UsersResolver.mutationResolver),
+	// ...UsersResolver.otherResolvers,
 };
